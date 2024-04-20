@@ -20,5 +20,8 @@
   "item.purevanillaextract.yarn": "Yarn",
 
   "entity.purevanillaextract.cluckshroom": "Cluckshroom",
-  "item.purevanillaextract.cluckshroom_spawn_egg": "Cluckshroom Spawn Egg"
+  "item.purevanillaextract.cluckshroom_spawn_egg": "Cluckshroom Spawn Egg",
+
+  "entity.purevanillaextract.fancy_chicken": "Fancy Chicken",
+  "item.purevanillaextract.fancy_chicken_spawn_egg": "Fancy Chicken Spawn Egg"
 }

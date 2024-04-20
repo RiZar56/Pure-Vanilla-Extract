@@ -16,4 +16,7 @@ public class PureVanillaExtractModelLayers {
 
     public static final EntityModelLayer CLUCKSHROOM =
             new EntityModelLayer(new Identifier(PureVanillaExtract.MOD_ID, "cluckshroom"), "main");
+
+    public static final EntityModelLayer FANCY_CHICKEN =
+            new EntityModelLayer(new Identifier(PureVanillaExtract.MOD_ID, "fancy_chicken"), "main");
 }

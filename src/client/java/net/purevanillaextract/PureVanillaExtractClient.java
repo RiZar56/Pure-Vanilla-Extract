@@ -19,6 +19,7 @@ public class PureVanillaExtractClient implements ClientModInitializer {
 	public static final EntityModelLayer BLUEFISH = new EntityModelLayer(new Identifier(MOD_ID, "bluefish"), "main");
 	public static final EntityModelLayer WOOLY_COW = new EntityModelLayer(new Identifier(MOD_ID, "wooly_cow"), "main");
 	private static final EntityModelLayer CLUCKSHROOM = new EntityModelLayer(new Identifier(MOD_ID, "cluckshroom"), "main");
+	private static final EntityModelLayer FANCY_CHICKEN = new EntityModelLayer(new Identifier(MOD_ID, "fancy_chicken"), "main");
 
 
 	@Override
@@ -37,5 +38,8 @@ public class PureVanillaExtractClient implements ClientModInitializer {
 
 		EntityRendererRegistry.register(PureVanillaExtractEntities.CLUCKSHROOM, CluckshroomEntityRenderer::new);
 		EntityModelLayerRegistry.registerModelLayer(CLUCKSHROOM, CluckshroomEntityModel::getTexturedModelData);
+
+		EntityRendererRegistry.register(PureVanillaExtractEntities.FANCY_CHICKEN, FancyChickenEntityRenderer::new);
+		EntityModelLayerRegistry.registerModelLayer(FANCY_CHICKEN, FancyChickenEntityModel::getTexturedModelData);
 	}
 }

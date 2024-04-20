@@ -21,7 +21,7 @@ extends VanillaEntityTypeTagProvider {
                 .add(PureVanillaExtractEntities.SKELETON_WOLF);
 
         this.getOrCreateTagBuilder(EntityTypeTags.FALL_DAMAGE_IMMUNE)
-                .add(PureVanillaExtractEntities.CLUCKSHROOM);
+                .add(PureVanillaExtractEntities.CLUCKSHROOM, PureVanillaExtractEntities.FANCY_CHICKEN);
 
     }
 

@@ -10,10 +10,7 @@ import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 import net.minecraft.world.gen.feature.BlueIceFeature;
 import net.purevanillaextract.PureVanillaExtract;
-import net.purevanillaextract.entity.passive.BluefishEntity;
-import net.purevanillaextract.entity.passive.CluckshroomEntity;
-import net.purevanillaextract.entity.passive.SkeletonWolfEntity;
-import net.purevanillaextract.entity.passive.WoolyCowEntity;
+import net.purevanillaextract.entity.passive.*;
 
 import java.util.Optional;
 
@@ -60,6 +57,16 @@ public class PureVanillaExtractEntities {
         return Registry.register(Registries.ENTITY_TYPE, new Identifier(PureVanillaExtract.MOD_ID, name), entity);
     }
 
+    //Cluckshroom
+    public static final EntityType<FancyChickenEntity> FANCY_CHICKEN =
+            registerFancyChickenEntity("fancy_chicken",
+                    FabricEntityTypeBuilder.create(SpawnGroup.CREATURE, FancyChickenEntity::new)
+                            .dimensions(EntityDimensions.fixed(0.4f,1.0f)).build());
+
+    private static EntityType<FancyChickenEntity> registerFancyChickenEntity(String name, EntityType<FancyChickenEntity> entity) {
+        return Registry.register(Registries.ENTITY_TYPE, new Identifier(PureVanillaExtract.MOD_ID, name), entity);
+    }
+
     public static void registerPveEntities(){
         PureVanillaExtract.LOGGER.info("Registering Mod Entities for " + MOD_ID);
 
@@ -67,6 +74,7 @@ public class PureVanillaExtractEntities {
         FabricDefaultAttributeRegistry.register(BLUEFISH, BluefishEntity.createFishAttributes());
         FabricDefaultAttributeRegistry.register(WOOLY_COW, WoolyCowEntity.createCowAttributes());
         FabricDefaultAttributeRegistry.register(CLUCKSHROOM, CluckshroomEntity.createChickenAttributes());
+        FabricDefaultAttributeRegistry.register(FANCY_CHICKEN, CluckshroomEntity.createChickenAttributes());
 
     }
 }
