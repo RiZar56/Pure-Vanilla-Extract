@@ -1,0 +1,44 @@
+{
+	"schemaVersion": 1,
+	"id": "pure-vanilla-extract",
+	"version": "${version}",
+	"name": "Pure Vanilla Extract",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"Me!"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "CC0-1.0",
+	"icon": "assets/purevanillaextract/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"net.purevanillaextract.PureVanillaExtract"
+		],
+		"client": [
+			"net.purevanillaextract.PureVanillaExtractClient"
+		],
+		"fabric-datagen": [
+			"net.purevanillaextract.PureVanillaExtractDataGenerator"
+		]
+	},
+	"mixins": [
+		"pure-vanilla-extract.mixins.json",
+		{
+			"config": "pure-vanilla-extract.client.mixins.json",
+			"environment": "client"
+		}
+	],
+	"depends": {
+		"fabricloader": ">=0.15.9",
+		"minecraft": "~1.20.4",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}

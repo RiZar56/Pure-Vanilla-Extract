@@ -1,0 +1,24 @@
+{
+  "effect.purevanillaextract.insomnia": "Insomnia",
+  "block.purevanillaextract.bed.insomnia": "You feel too restless to sleep",
+
+  "block.purevanillaextract.wolf_cocoon": "Wolf Cocoon",
+
+  "entity.purevanillaextract.skeleton_wolf": "Skeleton Wolf",
+  "item.purevanillaextract.skeleton_wolf_spawn_egg": "Skeleton Wolf Spawn Egg",
+
+  "item.purevanillaextract.wolf_collar": "Wolf Collar",
+
+  "entity.purevanillaextract.bluefish": "Bluefish",
+  "item.purevanillaextract.bluefish": "Bluefish",
+  "item.purevanillaextract.cooked_bluefish": "Cooked Bluefish",
+  "item.purevanillaextract.bluefish_bucket": "Bucket of Bluefish",
+  "item.purevanillaextract.bluefish_spawn_egg": "Bluefish Spawn Egg",
+
+  "entity.purevanillaextract.wooly_cow": "Wooly Cow",
+  "item.purevanillaextract.wooly_cow_spawn_egg": "Wooly Cow Spawn Egg",
+  "item.purevanillaextract.yarn": "Yarn",
+
+  "entity.purevanillaextract.cluckshroom": "Cluckshroom",
+  "item.purevanillaextract.cluckshroom_spawn_egg": "Cluckshroom Spawn Egg"
+}

@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "hatch=0": {
+      "model": "purevanillaextract:block/wolf_cocoon_not_cracked"
+    },
+    "hatch=1": {
+      "model": "purevanillaextract:block/wolf_cocoon_slightly_cracked"
+    },
+    "hatch=2": {
+      "model": "purevanillaextract:block/wolf_cocoon_very_cracked"
+    }
+  }
+}

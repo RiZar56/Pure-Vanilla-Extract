@@ -1,0 +1,11 @@
+{
+  "parent": "purevanillaextract:block/wolf_cocoon",
+  "textures": {
+    "bottom": "purevanillaextract:block/wolf_cocoon_not_cracked_bottom",
+    "east": "purevanillaextract:block/wolf_cocoon_not_cracked_east",
+    "north": "purevanillaextract:block/wolf_cocoon_not_cracked_north",
+    "south": "purevanillaextract:block/wolf_cocoon_not_cracked_south",
+    "top": "purevanillaextract:block/wolf_cocoon_not_cracked_top",
+    "west": "purevanillaextract:block/wolf_cocoon_not_cracked_west"
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "package": "net.purevanillaextract.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+    "CatVariantMixin",
+    "PhantomEntityMixin",
+    "PlayerEntityMixin",
+    "PureVanillaExtractMixin",
+    "ServerPlayerEntityMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+	}
+}
