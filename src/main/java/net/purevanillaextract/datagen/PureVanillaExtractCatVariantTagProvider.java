@@ -17,7 +17,7 @@ extends VanillaCatVariantTagProvider {
     @Override
     protected void configure(RegistryWrapper.WrapperLookup lookup) {
         this.getOrCreateTagBuilder(CatVariantTags.DEFAULT_SPAWNS)
-                .add(PveCatVariant.PEANUT_BUTTER);
+                .add(PveCatVariant.PEANUT_BUTTER, PveCatVariant.COCO, PveCatVariant.ZACH);
 
     }
 }

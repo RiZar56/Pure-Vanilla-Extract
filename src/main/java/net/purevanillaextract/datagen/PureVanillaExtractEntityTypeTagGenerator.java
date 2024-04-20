@@ -7,7 +7,6 @@ import net.minecraft.registry.tag.EntityTypeTags;
 import net.purevanillaextract.entity.PureVanillaExtractEntities;
 
 
-import java.util.Calendar;
 import java.util.concurrent.CompletableFuture;
 
 public class PureVanillaExtractEntityTypeTagGenerator
@@ -20,6 +19,9 @@ extends VanillaEntityTypeTagProvider {
     protected void configure(RegistryWrapper.WrapperLookup lookup) {
         this.getOrCreateTagBuilder(EntityTypeTags.SKELETONS)
                 .add(PureVanillaExtractEntities.SKELETON_WOLF);
+
+        this.getOrCreateTagBuilder(EntityTypeTags.FALL_DAMAGE_IMMUNE)
+                .add(PureVanillaExtractEntities.CLUCKSHROOM);
 
     }
 

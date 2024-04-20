@@ -12,7 +12,7 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
-import static net.purevanillaextract.entity.passive.PveCatVariant.PEANUT_BUTTER;
+import static net.purevanillaextract.entity.passive.PveCatVariant.*;
 
 @Mixin(CatVariant.class)
 abstract class CatVariantMixin {
@@ -20,6 +20,8 @@ abstract class CatVariantMixin {
     @Inject(method = "registerAndGetDefault", at = @At("HEAD"), cancellable = true)
     private static void registerAndGetDefault(Registry<CatVariant> registry, CallbackInfoReturnable<CatVariant> cir) {
         registerMixin(registry, PEANUT_BUTTER, "textures/entity/cat/peanut_butter.png");
+        registerMixin(registry, COCO, "textures/entity/cat/coco.png");
+        registerMixin(registry, ZACH, "textures/entity/cat/zach.png");
     }
 
     private static CatVariant registerMixin(Registry<CatVariant> registry, RegistryKey<CatVariant> key, String textureId) {

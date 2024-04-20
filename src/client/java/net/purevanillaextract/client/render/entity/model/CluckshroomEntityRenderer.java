@@ -14,6 +14,8 @@ import net.purevanillaextract.entity.passive.CluckshroomEntity;
 @Environment(EnvType.CLIENT)
 public class CluckshroomEntityRenderer extends MobEntityRenderer<CluckshroomEntity, CluckshroomEntityModel<CluckshroomEntity>> {
     public static final Identifier RED = new Identifier(PureVanillaExtract.MOD_ID,"textures/entity/cluckshroom/cluckshroom.png" );
+    public static final Identifier BROWN = new Identifier(PureVanillaExtract.MOD_ID,"textures/entity/cluckshroom/cluckshroom_brown.png" );
+
 
     public CluckshroomEntityRenderer(EntityRendererFactory.Context context) {
         super(context, new CluckshroomEntityModel<>(context.getPart(PureVanillaExtractModelLayers.CLUCKSHROOM)), 0.3f);

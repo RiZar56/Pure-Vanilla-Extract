@@ -1,6 +1,8 @@
 {
   "replace": false,
   "values": [
-    "minecraft:peanut_butter"
+    "minecraft:peanut_butter",
+    "minecraft:coco",
+    "minecraft:zach"
   ]
 }
