@@ -28,6 +28,7 @@ import net.purevanillaextract.item.PureVanillaExtractItems;
 import net.purevanillaextract.loot.condition.PureVanillaExtractEntityPropertiesLootCondition;
 import net.purevanillaextract.predicate.entity.PureVanillaExtractEntityFlagsPredicate;
 import net.purevanillaextract.predicate.entity.PureVanillaExtractEntityPredicate;
+import net.purevanillaextract.util.PureVanillaExtractLootTableModifiers;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -46,6 +47,9 @@ public class PureVanillaExtract implements ModInitializer {
 
 	private static  final Identifier WOLF_LOOT_TABLE_ID = EntityType.WOLF.getLootTableId();
 
+	private static  final Identifier HOGLIN_LOOT_TABLE_ID = EntityType.HOGLIN.getLootTableId();
+
+
 
 
 
@@ -60,29 +64,14 @@ public class PureVanillaExtract implements ModInitializer {
 		PureVanillaExtractItems.registerPveItems();
 		PureVanillaExtractEntities.registerPveEntities();
 
+		PureVanillaExtractLootTableModifiers.modifyLootTables();
+
 
 
 		//this stuff needs to be moved into dedicated classes vvvvv
 
-
 		//Sets custom spawn rules for phantoms
 		BiomeModifications.addSpawn(BiomeSelectors.includeByKey(SOUL_SAND_VALLEY), SpawnGroup.MONSTER, EntityType.PHANTOM, 5, 3, 5);
-
-		//Assigns custom drops to vanilla entities
-		LootTableEvents.MODIFY.register(((resourceManager, lootManager, id, tableBuilder, source) -> {
-			if (source.isBuiltin() && WOLF_LOOT_TABLE_ID.equals(id)) {
-				LootPool.Builder poolBuilder = LootPool.builder()
-						.with(ItemEntry.builder(PureVanillaExtractItems.WOLF_COLLAR)
-							.conditionally(RandomChanceLootCondition.builder(1f))
-							.conditionally(PureVanillaExtractEntityPropertiesLootCondition
-									.builder(LootContext.EntityTarget.THIS,
-											PureVanillaExtractEntityPredicate.Builder.create()
-													.pveFlags(PureVanillaExtractEntityFlagsPredicate.Builder
-															.create().isTamed(true)))));
-				tableBuilder.pool(poolBuilder);
-			}
-		}));
-
 
 	}
 }

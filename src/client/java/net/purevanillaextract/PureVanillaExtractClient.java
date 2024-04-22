@@ -5,10 +5,12 @@ import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
+import net.minecraft.client.render.entity.FlyingItemEntityRenderer;
 import net.minecraft.client.render.entity.model.EntityModelLayer;
 import net.minecraft.util.Identifier;
 import net.purevanillaextract.client.render.entity.model.*;
 import net.purevanillaextract.entity.PureVanillaExtractEntities;
+import net.purevanillaextract.entity.projectile.thrown.IceBombEntity;
 
 import static net.purevanillaextract.PureVanillaExtract.MOD_ID;
 
@@ -41,5 +43,7 @@ public class PureVanillaExtractClient implements ClientModInitializer {
 
 		EntityRendererRegistry.register(PureVanillaExtractEntities.FANCY_CHICKEN, FancyChickenEntityRenderer::new);
 		EntityModelLayerRegistry.registerModelLayer(FANCY_CHICKEN, FancyChickenEntityModel::getTexturedModelData);
+
+		EntityRendererRegistry.register(PureVanillaExtractEntities.ICE_BOMB, FlyingItemEntityRenderer::new);
 	}
 }

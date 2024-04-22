@@ -15,6 +15,8 @@ import net.purevanillaextract.PureVanillaExtract;
 import net.purevanillaextract.block.PureVanillaExtractBlocks;
 import net.purevanillaextract.entity.PureVanillaExtractEntities;
 
+import static net.minecraft.item.Items.BUCKET;
+
 public class PureVanillaExtractItems {
 
     //Modded Items
@@ -32,7 +34,19 @@ public class PureVanillaExtractItems {
     public static final Item COOKED_BLUEFISH = registerItem("cooked_bluefish", new Item(new FabricItemSettings().food(FoodComponents.COOKED_COD)));
     public static final Item BLUEFISH_BUCKET = registerItem("bluefish_bucket", new EntityBucketItem(PureVanillaExtractEntities.BLUEFISH, Fluids.WATER, SoundEvents.ITEM_BUCKET_EMPTY_FISH, new Item.Settings().maxCount(1)));
 
+    public static final Item MUD_BUCKET = registerItem("mud_bucket", new BucketItem(Fluids.WATER, new FabricItemSettings().recipeRemainder(BUCKET).maxCount(1)));
+
+
     public static final Item YARN = registerItem("yarn", new Item(new FabricItemSettings()));
+
+    public static final Item WITHERED_BONE = registerItem("withered_bone", new Item(new FabricItemSettings()));
+
+    public static final Item FANCY_FEATHER = registerItem("fancy_feather", new Item(new FabricItemSettings()));
+
+    public static final Item ICE_BOMB = registerItem("ice_bomb", new IceBombItem(new FabricItemSettings().maxCount(16)));
+
+    public static final Item HAM = registerItem("ham", new Item(new FabricItemSettings().food(new FoodComponent.Builder().hunger(3).saturationModifier(0.3f).meat().build())));
+    public static final Item COOKED_HAM = registerItem("cooked_ham", new Item(new FabricItemSettings().food(new FoodComponent.Builder().hunger(6).saturationModifier(0.6f).meat().build())));
 
 
 
@@ -40,6 +54,8 @@ public class PureVanillaExtractItems {
     //ItemGroup Adders
     private static void addItemsToToolsItemGroup(FabricItemGroupEntries entries) {
         entries.add(BLUEFISH_BUCKET);
+        entries.add(MUD_BUCKET);
+
     }
 
     private static void addItemsToNaturalItemGroup(FabricItemGroupEntries entries) {
@@ -57,11 +73,16 @@ public class PureVanillaExtractItems {
     private static void addItemsToIngredientsItemGroup(FabricItemGroupEntries entries) {
         entries.add(WOLF_COLLAR);
         entries.add(YARN);
+        entries.add(FANCY_FEATHER);
+        entries.add(ICE_BOMB);
+        entries.add(WITHERED_BONE);
     }
 
     private static void addItemsToFoodItemGroup(FabricItemGroupEntries entries) {
         entries.add(BLUEFISH);
         entries.add(COOKED_BLUEFISH);
+        entries.add(HAM);
+        entries.add(COOKED_HAM);
     }
 
     //Helper Methods
