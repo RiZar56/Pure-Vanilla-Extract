@@ -1,4 +1,4 @@
-package net.purevanillaextract.client.render.entity.model;
+package net.purevanillaextract.client.render.entity;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -11,6 +11,8 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.math.RotationAxis;
 import net.purevanillaextract.PureVanillaExtract;
+import net.purevanillaextract.client.render.entity.model.BluefishEntityModel;
+import net.purevanillaextract.client.render.entity.model.PureVanillaExtractModelLayers;
 import net.purevanillaextract.entity.passive.BluefishEntity;
 
 @Environment(EnvType.CLIENT)

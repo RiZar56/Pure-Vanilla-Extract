@@ -24,6 +24,8 @@ import net.minecraft.util.Identifier;
 import net.purevanillaextract.block.PureVanillaExtractBlocks;
 import net.purevanillaextract.entity.PureVanillaExtractEntities;
 import net.purevanillaextract.entity.effect.PureVanillaExtractStatusEffects;
+import net.purevanillaextract.fluid.PureVanillaExtractFluids;
+import net.purevanillaextract.item.PureVanillaExtractItemGroups;
 import net.purevanillaextract.item.PureVanillaExtractItems;
 import net.purevanillaextract.loot.condition.PureVanillaExtractEntityPropertiesLootCondition;
 import net.purevanillaextract.predicate.entity.PureVanillaExtractEntityFlagsPredicate;
@@ -62,7 +64,9 @@ public class PureVanillaExtract implements ModInitializer {
 		PureVanillaExtractStatusEffects.registerPveEffects();
 		PureVanillaExtractBlocks.registerPveBlocks();
 		PureVanillaExtractItems.registerPveItems();
+		PureVanillaExtractItemGroups.registerPveItemGroups();
 		PureVanillaExtractEntities.registerPveEntities();
+		PureVanillaExtractFluids.registerPveFluids();
 
 		PureVanillaExtractLootTableModifiers.modifyLootTables();
 

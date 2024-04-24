@@ -1,4 +1,4 @@
-package net.purevanillaextract.client.render.entity.model;
+package net.purevanillaextract.client.render.entity;
 
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -8,6 +8,8 @@ import net.minecraft.entity.passive.ChickenEntity;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.MathHelper;
 import net.purevanillaextract.PureVanillaExtract;
+import net.purevanillaextract.client.render.entity.model.CluckshroomEntityModel;
+import net.purevanillaextract.client.render.entity.model.PureVanillaExtractModelLayers;
 import net.purevanillaextract.entity.passive.CluckshroomEntity;
 
 

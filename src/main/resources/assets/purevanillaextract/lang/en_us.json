@@ -29,9 +29,17 @@
   "item.purevanillaextract.ham": "Ham",
   "item.purevanillaextract.cooked_ham": "Cooked Ham",
 
+  "block.purevanillaextract.salt": "Salt",
+
   "item.purevanillaextract.withered_bone": "Withered Bone",
   "item.purevanillaextract.mud_bucket": "Bucket of Mud",
 
   "item.purevanillaextract.ice_bomb": "Ice Bomb",
-  "entity.purevanillaextract.ice_bomb": "Ice Bomb"
+  "entity.purevanillaextract.ice_bomb": "Ice Bomb",
+
+  "block.purevanillaextract.ruby_ore": "Ruby Ore",
+  "block.purevanillaextract.ruby_block": "Block of Ruby",
+  "item.purevanillaextract.ruby": "Ruby",
+
+  "itemgroup.purevanillaextract": "Pure Vanilla Extract Items"
 }

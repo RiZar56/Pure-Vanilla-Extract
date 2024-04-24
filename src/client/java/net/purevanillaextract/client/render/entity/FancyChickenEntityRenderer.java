@@ -1,10 +1,12 @@
-package net.purevanillaextract.client.render.entity.model;
+package net.purevanillaextract.client.render.entity;
 
 import net.minecraft.client.render.entity.EntityRendererFactory;
 import net.minecraft.client.render.entity.MobEntityRenderer;
 import net.minecraft.util.Identifier;
 import net.minecraft.util.math.MathHelper;
 import net.purevanillaextract.PureVanillaExtract;
+import net.purevanillaextract.client.render.entity.model.FancyChickenEntityModel;
+import net.purevanillaextract.client.render.entity.model.PureVanillaExtractModelLayers;
 import net.purevanillaextract.entity.passive.FancyChickenEntity;
 
 public class FancyChickenEntityRenderer extends MobEntityRenderer<FancyChickenEntity, FancyChickenEntityModel<FancyChickenEntity>> {

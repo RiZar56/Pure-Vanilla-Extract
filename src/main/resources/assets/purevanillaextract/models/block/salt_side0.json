@@ -1,0 +1,6 @@
+{
+  "parent": "purevanillaextract:block/salt_side",
+  "textures": {
+    "line": "purevanillaextract:block/salt_line0"
+  }
+}

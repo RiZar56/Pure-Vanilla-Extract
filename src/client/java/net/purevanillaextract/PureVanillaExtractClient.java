@@ -3,14 +3,19 @@ package net.purevanillaextract;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
+import net.fabricmc.fabric.api.blockrenderlayer.v1.BlockRenderLayerMap;
+import net.fabricmc.fabric.api.client.render.fluid.v1.FluidRenderHandlerRegistry;
+import net.fabricmc.fabric.api.client.render.fluid.v1.SimpleFluidRenderHandler;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityModelLayerRegistry;
 import net.fabricmc.fabric.api.client.rendering.v1.EntityRendererRegistry;
+import net.minecraft.client.render.RenderLayer;
 import net.minecraft.client.render.entity.FlyingItemEntityRenderer;
 import net.minecraft.client.render.entity.model.EntityModelLayer;
 import net.minecraft.util.Identifier;
+import net.purevanillaextract.client.render.entity.*;
 import net.purevanillaextract.client.render.entity.model.*;
 import net.purevanillaextract.entity.PureVanillaExtractEntities;
-import net.purevanillaextract.entity.projectile.thrown.IceBombEntity;
+import net.purevanillaextract.fluid.PureVanillaExtractFluids;
 
 import static net.purevanillaextract.PureVanillaExtract.MOD_ID;
 
@@ -28,7 +33,18 @@ public class PureVanillaExtractClient implements ClientModInitializer {
 	public void onInitializeClient() {
 		// This entrypoint is suitable for setting up client-specific logic, such as rendering.
 
+		FluidRenderHandlerRegistry.INSTANCE.register(PureVanillaExtractFluids.STILL_MUD, PureVanillaExtractFluids.FLOWING_MUD, new SimpleFluidRenderHandler(
+				new Identifier("minecraft:block/water_still"),
+				new Identifier("minecraft:block/water_flow"),
+				0x70543e
+		));
 
+		BlockRenderLayerMap.INSTANCE.putFluids(RenderLayer.getTranslucent(), PureVanillaExtractFluids.STILL_MUD, PureVanillaExtractFluids.FLOWING_MUD);
+
+
+
+
+		//move to separate class
 		EntityRendererRegistry.register(PureVanillaExtractEntities.SKELETON_WOLF, SkeletonWolfEntityRenderer::new);
 		EntityModelLayerRegistry.registerModelLayer(SKELETON_WOLF, SkeletonWolfEntityModel::getTexturedModelData);
 

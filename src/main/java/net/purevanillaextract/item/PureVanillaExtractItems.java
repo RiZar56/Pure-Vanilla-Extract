@@ -14,6 +14,7 @@ import net.minecraft.util.Identifier;
 import net.purevanillaextract.PureVanillaExtract;
 import net.purevanillaextract.block.PureVanillaExtractBlocks;
 import net.purevanillaextract.entity.PureVanillaExtractEntities;
+import net.purevanillaextract.fluid.PureVanillaExtractFluids;
 
 import static net.minecraft.item.Items.BUCKET;
 
@@ -34,7 +35,10 @@ public class PureVanillaExtractItems {
     public static final Item COOKED_BLUEFISH = registerItem("cooked_bluefish", new Item(new FabricItemSettings().food(FoodComponents.COOKED_COD)));
     public static final Item BLUEFISH_BUCKET = registerItem("bluefish_bucket", new EntityBucketItem(PureVanillaExtractEntities.BLUEFISH, Fluids.WATER, SoundEvents.ITEM_BUCKET_EMPTY_FISH, new Item.Settings().maxCount(1)));
 
-    public static final Item MUD_BUCKET = registerItem("mud_bucket", new BucketItem(Fluids.WATER, new FabricItemSettings().recipeRemainder(BUCKET).maxCount(1)));
+    public static final Item PIG_BUCKET = registerItem("pig_bucket", new EntityBucketItem(EntityType.PIG, PureVanillaExtractFluids.STILL_MUD, SoundEvents.ITEM_BUCKET_EMPTY_FISH, new Item.Settings().maxCount(1)));
+
+
+    public static final Item MUD_BUCKET = registerItem("mud_bucket", new BucketItem(PureVanillaExtractFluids.STILL_MUD, new FabricItemSettings().recipeRemainder(BUCKET).maxCount(1)));
 
 
     public static final Item YARN = registerItem("yarn", new Item(new FabricItemSettings()));
@@ -42,6 +46,8 @@ public class PureVanillaExtractItems {
     public static final Item WITHERED_BONE = registerItem("withered_bone", new Item(new FabricItemSettings()));
 
     public static final Item FANCY_FEATHER = registerItem("fancy_feather", new Item(new FabricItemSettings()));
+
+    public static final Item RUBY = registerItem("ruby", new Item(new FabricItemSettings()));
 
     public static final Item ICE_BOMB = registerItem("ice_bomb", new IceBombItem(new FabricItemSettings().maxCount(16)));
 
@@ -55,6 +61,7 @@ public class PureVanillaExtractItems {
     private static void addItemsToToolsItemGroup(FabricItemGroupEntries entries) {
         entries.add(BLUEFISH_BUCKET);
         entries.add(MUD_BUCKET);
+        entries.add(PIG_BUCKET);
 
     }
 
@@ -76,6 +83,10 @@ public class PureVanillaExtractItems {
         entries.add(FANCY_FEATHER);
         entries.add(ICE_BOMB);
         entries.add(WITHERED_BONE);
+        entries.add(RUBY);
+        entries.add(PureVanillaExtractBlocks.SALT);
+        entries.add(PureVanillaExtractBlocks.RUBY_BLOCK);
+        entries.add(PureVanillaExtractBlocks.RUBY_ORE);
     }
 
     private static void addItemsToFoodItemGroup(FabricItemGroupEntries entries) {
@@ -98,5 +109,6 @@ public class PureVanillaExtractItems {
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(PureVanillaExtractItems::addItemsToIngredientsItemGroup);
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.FOOD_AND_DRINK).register(PureVanillaExtractItems::addItemsToFoodItemGroup);
         ItemGroupEvents.modifyEntriesEvent(ItemGroups.TOOLS).register(PureVanillaExtractItems::addItemsToToolsItemGroup);
+
     }
 }
